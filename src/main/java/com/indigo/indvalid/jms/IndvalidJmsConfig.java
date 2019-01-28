@@ -1,4 +1,4 @@
-package com.bc.indvalid.jms;
+package com.indigo.indvalid.jms;
 
 import javax.jms.ConnectionFactory;
 import javax.jms.Session;
@@ -19,7 +19,8 @@ import org.springframework.jms.support.converter.MappingJackson2MessageConverter
 import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import com.bc.indvalid.jms.error.JmsErrorHandler;
+
+import com.indigo.indvalid.jms.error.JmsErrorHandler;
 
 import lombok.Data;
 

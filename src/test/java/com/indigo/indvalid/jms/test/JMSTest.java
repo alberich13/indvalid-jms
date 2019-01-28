@@ -1,4 +1,4 @@
-package com.bc.indvalid.jms.test;
+package com.indigo.indvalid.jms.test;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
@@ -13,8 +13,10 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringRunner;
-import com.bc.indvalid.jms.IndvalidJmsConfig;
-import com.bc.indvalid.jms.model.Message;
+
+import com.indigo.indvalid.jms.IndvalidJmsConfig;
+import com.indigo.indvalid.jms.model.Message;
+
 import lombok.extern.slf4j.Slf4j;
 
 @RunWith(SpringRunner.class)

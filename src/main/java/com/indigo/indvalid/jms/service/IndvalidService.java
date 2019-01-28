@@ -1,8 +1,10 @@
-package com.bc.indvalid.jms.service;
+package com.indigo.indvalid.jms.service;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
-import com.bc.indvalid.jms.model.Message;
+
+import com.indigo.indvalid.jms.model.Message;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Component

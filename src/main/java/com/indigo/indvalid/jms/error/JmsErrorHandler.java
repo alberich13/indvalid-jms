@@ -1,4 +1,4 @@
-package com.bc.indvalid.jms.error;
+package com.indigo.indvalid.jms.error;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.ErrorHandler;

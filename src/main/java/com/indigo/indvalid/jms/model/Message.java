@@ -1,4 +1,4 @@
-package com.bc.indvalid.jms.model;
+package com.indigo.indvalid.jms.model;
 
 import java.time.LocalDateTime;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
