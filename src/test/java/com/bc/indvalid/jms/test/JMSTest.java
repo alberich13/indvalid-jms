@@ -2,6 +2,8 @@ package com.bc.indvalid.jms.test;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,29 +26,28 @@ public class JMSTest {
 	
 	@Autowired
 	private JmsTemplate jmsTemplate;
+	private static final String DESTINATION_NAME = "indvalid.queue";
 	
 	@Test
-	public void sendSaveJms() throws InterruptedException {
-		log.info("---------------------------------------------------------Sending a message.");
-        Message message = new Message();
-        message.setBody("Prueba de mensaje");
-        message.setDate(LocalDateTime.now());
-//        for(int indice = 3; indice >= 0; indice--){
-//        	log.info("AAR indice: "+indice);
-//        	message.setId(indice);
-//        	try {
-//        		jmsTemplate.convertAndSend("indvalid.queue", message);
-//        	} catch(Exception e){
-//        		log.info("AAR Muere del lado del cliente: ",e.getMessage());
-//        	}
-//        	
-//        }
-		jmsTemplate.convertAndSend("indvalid.queue", message);
-
-        log.info("Waiting for all ActiveMQ JMS Messages to be consumed");
-        TimeUnit.SECONDS.sleep(15);
-        System.exit(-1);
-        
+	public void sendSaveJmsList() throws InterruptedException {
+		IntStream.range(1, 5)
+			.boxed()
+			.collect(Collectors.toList())
+			.stream()
+			.map(this::getMessage)
+			.forEach(message -> jmsTemplate.convertAndSend(DESTINATION_NAME, message));
+		
+      log.info("Esperando a que la lista de mensajes sea consumida");
+      TimeUnit.SECONDS.sleep(20);
+      System.exit(-1);
+	}
+	
+	private Message getMessage(Integer id) {
+		Message message = new Message();
+		message.setId(id);
+		message.setBody(new StringBuilder("Cuerpo de el mensaje con id: ").append(id).toString());
+		message.setDate(LocalDateTime.now());
+		return message;
 	}
 	
 }
