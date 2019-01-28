@@ -10,10 +10,11 @@ import lombok.extern.slf4j.Slf4j;
 public class IndvalidService {
 	
 	@JmsListener(destination = "indvalid.queue", containerFactory = "myFactory")
-	public void process(final Message message) throws Exception{
-		log.info("Aqui se ejecuta algo periodicamente", message.getBody());
-		if(true){
-			throw new Exception("Fallamos a proposito");
+	public void process(final Message message) {
+		boolean noTieneId = message.getId() == null|| message.getId().equals(0);
+		log.info("Aqui se ejecuta algo periodicamente: "+ message.getId());
+		if(noTieneId){
+			throw new RuntimeException("Fallamos a proposito");
 		}
 	}
 }

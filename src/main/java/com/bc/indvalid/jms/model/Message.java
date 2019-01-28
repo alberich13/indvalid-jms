@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Message {
+	private Integer id;
 	private String body;
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	@JsonDeserialize(using=LocalDateTimeDeserializer.class)

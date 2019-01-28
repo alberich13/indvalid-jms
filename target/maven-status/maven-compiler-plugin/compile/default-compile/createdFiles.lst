@@ -1,4 +1,4 @@
-com/bc/indvalid/jms/IndvalidJmsConfig.class
-com/bc/indvalid/jms/error/JmsErrorHandler.class
-com/bc/indvalid/jms/service/IndvalidService.class
-com/bc/indvalid/jms/model/Message.class
+com\bc\indvalid\jms\model\Message.class
+com\bc\indvalid\jms\service\IndvalidService.class
+com\bc\indvalid\jms\IndvalidJmsConfig.class
+com\bc\indvalid\jms\error\JmsErrorHandler.class
