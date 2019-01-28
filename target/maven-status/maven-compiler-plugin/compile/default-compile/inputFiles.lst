@@ -1,4 +1,4 @@
-C:\Users\alrua\INDIGO\indvalid-jms\src\main\java\com\bc\indvalid\jms\model\Message.java
-C:\Users\alrua\INDIGO\indvalid-jms\src\main\java\com\bc\indvalid\jms\IndvalidJmsConfig.java
-C:\Users\alrua\INDIGO\indvalid-jms\src\main\java\com\bc\indvalid\jms\error\JmsErrorHandler.java
-C:\Users\alrua\INDIGO\indvalid-jms\src\main\java\com\bc\indvalid\jms\service\IndvalidService.java
+/home/aaron/eclipse-workspace/indvalid-jms/src/main/java/com/bc/indvalid/jms/error/JmsErrorHandler.java
+/home/aaron/eclipse-workspace/indvalid-jms/src/main/java/com/bc/indvalid/jms/service/IndvalidService.java
+/home/aaron/eclipse-workspace/indvalid-jms/src/main/java/com/bc/indvalid/jms/model/Message.java
+/home/aaron/eclipse-workspace/indvalid-jms/src/main/java/com/bc/indvalid/jms/IndvalidJmsConfig.java

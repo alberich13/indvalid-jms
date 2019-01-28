@@ -35,8 +35,7 @@ public class IndvalidJmsConfig {
         factory.setConcurrency("2-100");
         factory.setErrorHandler(new JmsErrorHandler());
         factory.setSessionAcknowledgeMode(Session.CLIENT_ACKNOWLEDGE);
-//        configurer.configure(factory, connectionFactory);
-        configurer.configure(factory, connectionFactory());
+        configurer.configure(factory, connectionFactory);
         return factory;
     }
 	
@@ -49,7 +48,7 @@ public class IndvalidJmsConfig {
         policy.setInitialRedeliveryDelay(0);
         policy.setBackOffMultiplier(2);
         policy.setUseExponentialBackOff(true);
-        policy.setMaximumRedeliveries(4);
+        policy.setMaximumRedeliveries(3);
         policy.setRedeliveryDelay(500);
 //        policy.setMaximumRedeliveryDelay(6000);
         policy.setUseCollisionAvoidance(Boolean.TRUE);
