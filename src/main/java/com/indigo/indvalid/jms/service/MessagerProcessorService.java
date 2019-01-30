@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class IndvalidService {
+public class MessagerProcessorService {
 	
 	@JmsListener(destination = "indvalid.queue", containerFactory = "myFactory")
 	public void process(final Message message) {
